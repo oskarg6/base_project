@@ -1,0 +1,14 @@
+#fos_user_security:
+#    resource: '@FOSUserBundle/Resources/config/routing/security.xml'
+
+_backoffice:
+    resource: routing/backoffice.yml
+    prefix: /backoffice
+
+_frontoffice:
+    resource: routing/frontoffice.yml
+    prefix: /
+
+_fos_user:
+    resource: routing/fos_user.yml
+    prefix: /

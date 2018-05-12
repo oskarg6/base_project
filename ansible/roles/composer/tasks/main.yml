@@ -1,0 +1,29 @@
+- name: Download composer
+  get_url:
+    url: https://getcomposer.org/installer
+    dest: /tmp/composer-installer
+
+- name: Install composer
+  command: php /tmp/composer-installer --install-dir=/usr/local/bin --filename=composer
+  args:
+    creates: /usr/local/bin/composer
+
+- name: Install global composer packages
+  become: false
+  command: composer global require {{ item }}
+  with_items: '{{ composer.packages }}'
+  when: composer.packages is defined
+
+- name: Add composer global packages to path
+  become: false
+  lineinfile:
+    dest: ~/.bashrc
+    state: present
+    line: 'export PATH=~/.config/composer/vendor/bin:$PATH'
+
+- name: Install composer vendors
+  become: false
+  composer:
+    no_dev: no
+    optimize_autoloader: yes
+    working_dir: /vagrant

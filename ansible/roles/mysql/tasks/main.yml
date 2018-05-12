@@ -1,0 +1,33 @@
+---
+- name: Install mysql packages
+  apt:
+    pkg: '{{ item }}'
+    state: latest
+  with_items:
+    - mysql-server
+    - mysql-client
+    - python-mysqldb
+
+- name: Drop database
+  mysql_db:
+    name: '{{ mysql.database }}'
+    state: absent
+
+- name: Create database
+  mysql_db:
+    name: '{{ mysql.database }}'
+    state: present
+
+- name: Import dump
+  mysql_db:
+    name: '{{ mysql.database }}'
+    state: import
+    target: /vagrant/{{ mysql.dump }}
+  when: mysql.dump
+
+- name: Create users
+  mysql_user:
+    name: '{{ mysql.user }}'
+    password: '{{ mysql.password }}'
+    priv: '{{ mysql.database }}.*:ALL'
+    state: present

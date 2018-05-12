@@ -1,0 +1,13 @@
+master:
+  host: 195.55.105.232
+  user: oper
+  deploy_path: /deploy/path
+  stage: master
+  branch: master
+
+development:
+  host: 195.55.105.232
+  user: oper
+  deploy_path: /deploy/path
+  stage: development
+  branch: development

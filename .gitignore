@@ -1,0 +1,39 @@
+/.web-server-pid
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/*
+/web/bundles/
+
+# ENVIRONMENT
+.vagrant
+
+# OS GENERATED FILES
+.DS_Store
+.DS_Store?
+
+# ANSIBLE
+playbook.retry
+
+# VAGRANT
+ubuntu-xenial-16.04-cloudimg-console.log
+
+# NODE
+node_modules
+
+# GULP
+web/service-worker.js
+/.tmp
+
+usergit.php

@@ -1,0 +1,53 @@
+---
+- name: Update apt
+  apt:
+    update_cache: yes
+
+- name: Install system packages
+  apt:
+    pkg: '{{ item }}'
+    state: latest
+  with_items:
+    - curl
+    - wget
+    - python-software-properties
+
+- name: Install extra packages
+  apt:
+    pkg: '{{ item }}'
+    state: latest
+  with_items: '{{ server.packages }}'
+  when: server.packages is defined
+
+- name: Configure the timezone
+  template:
+    src: timezone
+    dest: /etc/timezone
+
+- name: More configuration of timezone
+  file:
+    src: '/usr/share/zoneinfo/{{ server.timezone }}'
+    dest: /etc/localtime
+    state: link
+    force: yes
+
+- name: Set default system language pack
+  command: 'locale-gen {{ server.locale }}'
+
+#- name: less Open ssh keys
+#  become: true
+#  shell: chmod 600 /home/ubuntu/.ssh/id_rsa
+#
+#- name: Create config bitbucket ssh
+#  become: false
+#  template:
+#    src: '{{ item }}'
+#    dest: '/home/ubuntu/.ssh/{{ item }}'
+#  with_items:
+#    - config
+#
+#- name: activar ssh agent
+#  become: false
+#  shell: eval $(ssh-agent) && ssh-add /home/ubuntu/.ssh/id_rsa
+
+- include: swap.yml

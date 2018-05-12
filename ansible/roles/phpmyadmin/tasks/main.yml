@@ -1,0 +1,13 @@
+---
+- name: Install phpmyadmin
+  apt:
+    pkg: phpmyadmin
+    install_recommends: no
+    state: latest
+
+- name: Add phpmyadmin to apache
+  lineinfile:
+    dest: /etc/apache2/apache2.conf
+    state: present
+    line: 'Include /etc/phpmyadmin/apache.conf'
+  notify: Restart apache

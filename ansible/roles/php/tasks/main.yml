@@ -1,0 +1,47 @@
+---
+- name: Add ppa repository
+  apt_repository:
+    repo: ppa:ondrej/php
+
+- name: Update apt
+  apt:
+    update_cache: yes
+
+- name: Install php
+  apt:
+    pkg: 'php{{ php.version }}'
+    state: latest
+
+- name: Install php extensions
+  apt:
+    pkg: 'php{{ php.version }}-{{ item }}'
+    state: latest
+  with_items: '{{ php.extensions }}'
+  when: php.extensions is defined
+  notify: Restart apache
+
+- name: Install php extras
+  apt:
+    pkg: '{{ item }}'
+    install_recommends: no
+    state: latest
+  with_items: '{{ php.extras }}'
+  when: php.extras is defined
+  notify: Restart apache
+
+- name: Disable xdebug
+  command: phpdismod xdebug
+
+- name: Modify settings on apache php.ini
+  lineinfile:
+    dest: '/etc/php/{{ php.version }}/apache2/php.ini'
+    regexp: ';?{{ item.setting }} ?=.*'
+    line: '{{ item.setting }} = {{ item.value }}'
+  with_items: '{{ php.settings }}'
+
+- name: Modify settings on cli php.ini
+  lineinfile:
+    dest: '/etc/php/{{ php.version }}/cli/php.ini'
+    regexp: ';?{{ item.setting }} ?=.*'
+    line: '{{ item.setting }} = {{ item.value }}'
+  with_items: '{{ php.settings }}'

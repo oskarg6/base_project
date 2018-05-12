@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  vars_files:
+    - vars/all.yml
+  roles:
+    - server
+    - apache
+    - mysql
+    - php
+    - phpmyadmin
+    - symfony
+    - composer
+    - node
+    - ruby
+    - app
