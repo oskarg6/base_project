@@ -5,7 +5,8 @@
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle"
+            "AppBundle\\": "src/AppBundle",
+            "Application\\": "src/Application"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
@@ -19,10 +20,15 @@
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-migrations-bundle": "^1.3",
         "doctrine/orm": "^2.5",
+        "egeloen/ckeditor-bundle": "4.0.6",
+        "friendsofsymfony/ckeditor-bundle": "^1.0",
         "friendsofsymfony/user-bundle": "2.0.1",
+        "runroom/user-bundle": "4.x-dev",
+        "gedmo/doctrine-extensions": "^2.4",
         "incenteev/composer-parameter-handler": "^2.0",
+        "knplabs/doctrine-behaviors": "1.4.0",
         "peraladaweb/koobinphp": "dev-master",
-        "pixassociates/sortable-behavior-bundle": "1.0",
+        "pixassociates/sortable-behavior-bundle": "^1.5",
         "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^5.0.0",
         "sonata-project/admin-bundle": "3.18.2",
@@ -34,6 +40,7 @@
         "sonata-project/formatter-bundle": "3.4.0",
         "sonata-project/intl-bundle": "2.3.0",
         "sonata-project/media-bundle": "3.12.0",
+        "stof/doctrine-extensions-bundle": "^1.3",
         "symfony/monolog-bundle": "^3.1.0",
         "symfony/polyfill-apcu": "^1.0",
         "symfony/swiftmailer-bundle": "^2.6.4",

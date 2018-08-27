@@ -1,0 +1,145 @@
+#ivory_ck_editor:
+#    default_config: default
+#    configs:
+#        default:
+#            stylesSet: estilos
+#            toolbar:
+#                - ['Styles']
+#                - '-'
+#                - ['Bold', 'Italic', 'Underline']
+#                - '-'
+#                - ['Link', 'Unlink', 'Anchor']
+#                - '-'
+#                - ['NumberedList', 'BulletedList', 'Blockquote', 'Table']
+#                - '-'
+#                - ['Source']
+#
+#        media:
+#            entities: false
+#            forceEnterMode: true
+#            stylesSet: estilos
+#            toolbar:
+#                - ['Styles']
+#                - '-'
+#                - ['Bold', 'Italic', 'Underline']
+#                - '-'
+#                - ['Image']
+#                - '-'
+#                - ['Link', 'Unlink', 'Anchor']
+#                - '-'
+#                - ['NumberedList', 'BulletedList', 'Blockquote', 'Table']
+#                - '-'
+#                - ['Source']
+#
+#            filebrowserBrowseRoute: admin_sonata_media_media_ckeditor_browser
+#            filebrowserImageBrowseRoute: admin_sonata_media_media_ckeditor_browser
+#            filebrowserImageBrowseRouteParameters:
+#                provider: sonata.media.provider.image
+#
+#            filebrowserUploadRoute: admin_sonata_media_media_ckeditor_upload
+#            filebrowserUploadRouteParameters:
+#                provider: sonata.media.provider.file
+#            filebrowserImageUploadRoute: admin_sonata_media_media_ckeditor_upload
+#            filebrowserImageUploadRouteParameters:
+#                provider: sonata.media.provider.image
+#                context: default
+#
+#    styles:
+#        estilos:
+#            -
+#                name: 'Title h1'
+#                element: 'h1'
+#                attributes: { class: 't-h1' }
+#            -
+#                name: 'Title h2'
+#                element: 'h2'
+#                attributes: { class: 't-h2' }
+#            -
+#                name: 'Title h3'
+#                element: 'h3'
+#                attributes: { class: 't-h3' }
+#            -
+#                name: 'Title h4'
+#                element: 'h4'
+#                attributes: { class: 't-h4' }
+#            -
+#                name: 'Title h5'
+#                element: 'h5'
+#                attributes: { class: 't-h5' }
+#            -
+#                name: 'Title h6'
+#                element: 'h6'
+#                attributes: { class: 't-h6' }
+
+fos_ck_editor:
+    default_config: default
+    configs:
+        default:
+            stylesSet: estilos
+            toolbar:
+                - ['Styles']
+                - '-'
+                - ['Bold', 'Italic', 'Underline']
+                - '-'
+                - ['Link', 'Unlink', 'Anchor']
+                - '-'
+                - ['NumberedList', 'BulletedList', 'Blockquote', 'Table']
+                - '-'
+                - ['Source']
+
+        media:
+            entities: false
+            forceEnterMode: true
+            stylesSet: estilos
+            toolbar:
+                - ['Styles']
+                - '-'
+                - ['Bold', 'Italic', 'Underline']
+                - '-'
+                - ['Image']
+                - '-'
+                - ['Link', 'Unlink', 'Anchor']
+                - '-'
+                - ['NumberedList', 'BulletedList', 'Blockquote', 'Table']
+                - '-'
+                - ['Source']
+
+            filebrowserBrowseRoute: admin_sonata_media_media_ckeditor_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_ckeditor_browser
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+
+            filebrowserUploadRoute: admin_sonata_media_media_ckeditor_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            filebrowserImageUploadRoute: admin_sonata_media_media_ckeditor_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: default
+
+    styles:
+        estilos:
+            -
+                name: 'Title h1'
+                element: 'h1'
+                attributes: { class: 't-h1' }
+            -
+                name: 'Title h2'
+                element: 'h2'
+                attributes: { class: 't-h2' }
+            -
+                name: 'Title h3'
+                element: 'h3'
+                attributes: { class: 't-h3' }
+            -
+                name: 'Title h4'
+                element: 'h4'
+                attributes: { class: 't-h4' }
+            -
+                name: 'Title h5'
+                element: 'h5'
+                attributes: { class: 't-h5' }
+            -
+                name: 'Title h6'
+                element: 'h6'
+                attributes: { class: 't-h6' }

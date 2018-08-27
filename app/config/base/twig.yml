@@ -1,4 +1,12 @@
 # Twig Configuration
 twig:
+    globals:
+        locales: '%locales%'
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+    - 'SonataCoreBundle:Form:datepicker.html.twig'
+    - 'SonataMediaBundle:Form:media_widgets.html.twig'
+    - 'SonataCoreBundle:Form:datepicker.html.twig'
+    - 'SonataFormatterBundle:Form:formatter.html.twig'
+    - 'sonata/custom_widgets.html.twig'
