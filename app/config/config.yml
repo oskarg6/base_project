@@ -5,23 +5,23 @@ imports:
     - { resource: services.yml }
 # Base
     - { resource: base/a2lix_translation_form.yml }
-    - { resource: base/knp_doctrine_behaviors.yml }
+#    - { resource: base/knp_doctrine_behaviors.yml }
     - { resource: base/doctrine.yml }
     - { resource: base/fos_user.yml }
     - { resource: base/swiftmailer.yml }
     - { resource: base/twig.yml }
-    - { resource: base/ivory_ckeditor.yml }
+#    - { resource: base/ivory_ckeditor.yml }
 # Sonata
     - { resource: sonata/sonata_admin.yml }
     - { resource: sonata/sonata_block.yml }
     - { resource: sonata/sonata_media.yml }
     - { resource: sonata/sonata_clasification.yml }
-    - { resource: sonata/sonata_formatter.yml }
+#    - { resource: sonata/sonata_formatter.yml }
     - { resource: sonata/sonata_user.yml }
 
 # Sortable
-    - { resource: sortable/pix_sortable_behavior.yml }
-    - { resource: sortable/stof_doctrine_extensions.yml }
+#    - { resource: sortable/pix_sortable_behavior.yml }
+#    - { resource: sortable/stof_doctrine_extensions.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration

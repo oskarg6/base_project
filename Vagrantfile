@@ -12,7 +12,7 @@ Vagrant.configure('2') do |config|
             'modifyvm', :id,
             '--name', 'base-project-vm',
             '--cpus', 1,
-            '--memory', 2048,
+            '--memory', 3072,
             '--natdnshostresolver1', 'on',
             '--nictype1', 'virtio',
             '--nictype2', 'virtio',

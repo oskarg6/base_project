@@ -1,2 +1,7 @@
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+sonata_user_admin_security:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /backoffice
+
+sonata_user_admin_resetting:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.xml'
+    prefix: /backoffice/resetting
