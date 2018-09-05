@@ -4,7 +4,7 @@
 
 ### Introducción
 
-#####Este proyecto funciona con:
+##### Este proyecto funciona con:
  * [Symfony 3.4.7](https://symfony.com/doc/current/index.html)
  * [Vagrant](https://www.vagrantup.com/docs/index.html)
  * [DeployerPHP](https://deployer.org/docs)
