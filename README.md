@@ -65,3 +65,11 @@ development:
 
 **Comandos Deployer:**
  * desplegar: `php vendor/deployer/deployer/bin/dep <stage>`
+ 
+ **Bundles instalados en el proyecto**
+  * [sonata admin](https://sonata-project.org/bundles/admin/3-x/doc/index.html)
+  * [sonata media bundle](https://sonata-project.org/bundles/media/3-x/doc/index.html)
+  * [sonata user bundle](https://sonata-project.org/bundles/user/4-x/doc/index.html)
+  * [fos ckeditor](https://symfony.com/doc/current/bundles/FOSCKEditorBundle/installation.html)
+  * [KNP DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)
+  

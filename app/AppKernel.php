@@ -21,6 +21,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
 
+			new Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle(),
+
             # traducciones
             new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
 
@@ -32,12 +34,21 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\ClassificationBundle\SonataClassificationBundle(),
 
-            # media-bundle
-            new Sonata\MediaBundle\SonataMediaBundle(),
-            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle(),
+			# sortable behavior Admin
+			new Pix\SortableBehaviorBundle\PixSortableBehaviorBundle(),
+			new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 
-            # user-bundle
+			# fos-ckeditor
+			new FOS\CKEditorBundle\FOSCKEditorBundle(),
+			new Sonata\FormatterBundle\SonataFormatterBundle(),
+			new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
+
+			# media-bundle
+			new Sonata\MediaBundle\SonataMediaBundle(),
+			new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+			new JMS\SerializerBundle\JMSSerializerBundle(),
+
+			# user-bundle
 			new FOS\UserBundle\FOSUserBundle(),
 			new Sonata\UserBundle\SonataUserBundle(),
 			new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),

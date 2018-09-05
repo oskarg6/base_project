@@ -2663,7 +2663,7 @@
             "source": {
                 "type": "git",
                 "url": "https://oscargarciarodriguez@bitbucket.org/peraladaweb/koobinphppublic.git",
-                "reference": "d8d08c8e0b20316ade8caa69ccc24cc425548a6f"
+                "reference": "93c88705adf45b3997ccd4e0ed0e3f94975b8557"
             },
             "require": {
                 "php": ">=5.5"
@@ -2686,7 +2686,7 @@
                 "proprietary"
             ],
             "description": "libreria de integracion de koobin en php",
-            "time": "2018-04-30T11:17:29+00:00"
+            "time": "2018-08-29T10:19:00+00:00"
         },
         {
             "name": "phpcollection/phpcollection",
