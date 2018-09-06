@@ -16,6 +16,10 @@
  La configuración esta en vagrant file, y necesitamos tener instalado Vagrant
  y VirtualBox para poder generar la máquina y arrancarla.
  
+###### HostManager
+ Es necesario instalar hostmanager  con este comando
+ `vagrant install vagrant-hostmanager`
+ 
  **Los comandos básicos son:**
    * arrancar máquina: `vagrant up` 
    * apagar máquina: `vagrant halt`
