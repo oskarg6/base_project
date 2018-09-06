@@ -80,4 +80,5 @@ development:
   
 ### Una vez instalado
  Una vez instalado, puedes ver si el proyecto funciona correctamente mirando la url: [`http://base-project.test/`](http://base-project.test/)
+ para acceder a phpMyAdmin del proyecto se ha de ir a esta url: [`http://base-project.test/phpmyadmin/`](http://base-project.test/phpmyadmin/)
   
