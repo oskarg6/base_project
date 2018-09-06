@@ -78,5 +78,5 @@ development:
   * [KNP DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)
   
 ### Una vez instalado
- Una vez instalado, puedes ver si el proyecto funciona correctamente mirando la url: `http://base-project.test/`
+ Una vez instalado, puedes ver si el proyecto funciona correctamente mirando la url: (`http://base-project.test/`](http://base-project.test/)
   
