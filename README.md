@@ -8,6 +8,7 @@
  * [Symfony 3.4.7](https://symfony.com/doc/current/index.html)
  * [Vagrant](https://www.vagrantup.com/docs/index.html)
  * [DeployerPHP](https://deployer.org/docs)
+ * [phpMyAdmin](https://www.phpmyadmin.net/)
  
 ### Vagrant
  [Vagrant](https://www.vagrantup.com/docs/index.html) lo usamos para generar una máquina virtual con un servidor web, 
