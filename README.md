@@ -4,10 +4,11 @@
 
 ### Introducción
 
-#####Este proyecto funciona con:
+##### Este proyecto funciona con:
  * [Symfony 3.4.7](https://symfony.com/doc/current/index.html)
  * [Vagrant](https://www.vagrantup.com/docs/index.html)
  * [DeployerPHP](https://deployer.org/docs)
+ * [phpMyAdmin](https://www.phpmyadmin.net/)
  
 ### Vagrant
  [Vagrant](https://www.vagrantup.com/docs/index.html) lo usamos para generar una máquina virtual con un servidor web, 
@@ -15,6 +16,10 @@
  servidor final.
  La configuración esta en vagrant file, y necesitamos tener instalado Vagrant
  y VirtualBox para poder generar la máquina y arrancarla.
+ 
+###### HostManager
+ Es necesario instalar hostmanager  con este comando
+ `vagrant plugin install vagrant-hostmanager`
  
  **Los comandos básicos son:**
    * arrancar máquina: `vagrant up` 
@@ -72,4 +77,9 @@ development:
   * [sonata user bundle](https://sonata-project.org/bundles/user/4-x/doc/index.html)
   * [fos ckeditor](https://symfony.com/doc/current/bundles/FOSCKEditorBundle/installation.html)
   * [KNP DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)
+  
+### Una vez instalado
+ Una vez instalado, puedes ver si el proyecto funciona correctamente mirando la url: [`http://base-project.test/`](http://base-project.test/)
+ 
+ Para acceder a phpMyAdmin del proyecto se ha de ir a esta url: [`http://base-project.test/phpmyadmin/`](http://base-project.test/phpmyadmin/)
   
