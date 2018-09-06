@@ -18,7 +18,7 @@
  
 ###### HostManager
  Es necesario instalar hostmanager  con este comando
- `vagrant install vagrant-hostmanager`
+ `vagrant plugin install vagrant-hostmanager`
  
  **Los comandos básicos son:**
    * arrancar máquina: `vagrant up` 
