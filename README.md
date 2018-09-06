@@ -77,3 +77,6 @@ development:
   * [fos ckeditor](https://symfony.com/doc/current/bundles/FOSCKEditorBundle/installation.html)
   * [KNP DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)
   
+### Una vez instalado
+ Una vez instalado, puedes ver si el proyecto funciona correctamente mirando la url: `http://base-project.test/`
+  
