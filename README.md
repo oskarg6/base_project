@@ -82,4 +82,7 @@ development:
  Una vez instalado, puedes ver si el proyecto funciona correctamente mirando la url: [`http://base-project.test/`](http://base-project.test/)
  
  Para acceder a phpMyAdmin del proyecto se ha de ir a esta url: [`http://base-project.test/phpmyadmin/`](http://base-project.test/phpmyadmin/)
+ 
+ ##### Si no funcionan los permisos correctamente
+ Si no te funcionan los permisos para generar los archivos de var/cache o var/logs, [symfony lo tiene documentado en su web](https://symfony.com/doc/3.3/setup/file_permissions.html)
   
