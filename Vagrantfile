@@ -27,8 +27,12 @@ Vagrant.configure('2') do |config|
         node.vm.hostname = 'base-project.test'
 
         node.vm.synced_folder './', '/vagrant', type: 'virtualbox'
+        # si hay problemas con los permisos en las carpetas de cache
+        #node.vm.synced_folder "./var", "/vagrant/var", :owner => 'vagrant', :group => 'www-data', :mount_options => ["dmode=775","fmode=666"]
+
         node.ssh.forward_agent = true
     end
+
 
     # para poder usar git con ssh, copia el ssh de mi ruta host y lo pega en el guest
       #config.vm.provision "file", source: "~/.ssh/id_rsa", destination: "/home/ubuntu/.ssh/id_rsa"
