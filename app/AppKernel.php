@@ -33,6 +33,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\ClassificationBundle\SonataClassificationBundle(),
+			new Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle(),
 
 			# sortable behavior Admin
 			new Pix\SortableBehaviorBundle\PixSortableBehaviorBundle(),
@@ -47,6 +48,7 @@ class AppKernel extends Kernel
 			new Sonata\MediaBundle\SonataMediaBundle(),
 			new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
 			new JMS\SerializerBundle\JMSSerializerBundle(),
+			new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
 
 			# user-bundle
 			new FOS\UserBundle\FOSUserBundle(),

@@ -26,8 +26,11 @@ doctrine:
                 mappings:
                     SonataMediaBundle: ~
                     SonataUserBundle: ~
+                    SonataClassificationBundle: ~
                     FOSUserBundle: ~
                     ApplicationSonataUserBundle: ~
+                    ApplicationSonataMediaBundle: ~
+                    ApplicationSonataClassificationBundle: ~
 
 
 doctrine_migrations:
