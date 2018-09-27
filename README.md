@@ -77,6 +77,7 @@ development:
   * [sonata user bundle](https://sonata-project.org/bundles/user/4-x/doc/index.html)
   * [fos ckeditor](https://symfony.com/doc/current/bundles/FOSCKEditorBundle/installation.html)
   * [KNP DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)
+  * [a2lix reanslation form](https://a2lix.fr/bundles/translation-form/2.x.html)
   
 ### Una vez instalado
  Una vez instalado, puedes ver si el proyecto funciona correctamente mirando la url: [`http://base-project.test/`](http://base-project.test/)
