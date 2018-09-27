@@ -74,6 +74,7 @@ development:
  **Bundles instalados en el proyecto**
   * [sonata admin](https://sonata-project.org/bundles/admin/3-x/doc/index.html)
   * [sonata media bundle](https://sonata-project.org/bundles/media/3-x/doc/index.html)
+  * [sonata classification bundle](https://sonata-project.org/bundles/classification/2-x/doc/reference/introduction.html)
   * [sonata user bundle](https://sonata-project.org/bundles/user/4-x/doc/index.html)
   * [fos ckeditor](https://symfony.com/doc/current/bundles/FOSCKEditorBundle/installation.html)
   * [KNP DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors)
