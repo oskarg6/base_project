@@ -3,9 +3,6 @@
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
-// If you don't want to setup permissions the proper way, just uncomment the following PHP line
-umask(0002);
-
 require __DIR__ . '/../vendor/autoload.php';
 
 Debug::enable();
