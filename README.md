@@ -69,7 +69,7 @@ development:
 ```
 
 **Comandos Deployer:**
- * desplegar: `php vendor/deployer/deployer/bin/dep <stage>`
+ * desplegar: `php vendor/deployer/deployer/bin/dep deploy <stage>`
  
  **Bundles instalados en el proyecto**
   * [sonata admin](https://sonata-project.org/bundles/admin/3-x/doc/index.html)
