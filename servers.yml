@@ -1,12 +1,12 @@
 master:
-  host: 195.55.105.232
+  host: 195.195.195.195
   user: oper
   deploy_path: /deploy/path
   stage: master
   branch: master
 
 development:
-  host: 195.55.105.232
+  host: 195.195.195.195
   user: oper
   deploy_path: /deploy/path
   stage: development
