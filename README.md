@@ -11,10 +11,10 @@
  * [phpMyAdmin](https://www.phpmyadmin.net/)
  
 ### Vagrant
- [Vagrant](https://www.vagrantup.com/docs/index.html) lo usamos para generar una máquina virtual con un servidor web, 
+ [Vagrant](https://www.vagrantup.com/docs/index.html) se usa para generar una máquina virtual con un servidor web, 
  para desarrollar toda nuestra plataforma en un entorno lo más parecido al 
  servidor final.
- La configuración esta en vagrant file, y necesitamos tener instalado Vagrant
+ La configuración esta en `VagrantFile`, y se necesita tener instalado Vagrant
  y VirtualBox para poder generar la máquina y arrancarla.
  
 ###### HostManager
@@ -27,15 +27,15 @@
    * instalar servidor web: `vagrant provision`
    * destruir máquina: `vagrant destroy`
    
- El archivo de configuración de vagrant es VagrantFile, y se encuentra
+ El archivo de configuración de vagrant es `VagrantFile`, y se encuentra
  en la raíz del proyecto.
  
- Para instalar todo el programario para hacer el servidor web, necesitamos
+ Para instalar todo el programario para hacer el servidor web, se necesita
  provisionar vagrant con [Ansible](https://docs.ansible.com/). 
  Ansible se instala localmente dentro de la máquina de vagrant, y todas las
  configuraciones del servidor estan dentro de la carpeta ansible, en la 
  raíz del proyecto.
- El archivo principal de ansible es el playbook.yml.
+ El archivo principal de ansible es el `playbook.yml`.
  
  **Ansible instala:**
   * php 5.6
@@ -48,7 +48,7 @@
 ### Deployer PHP
 Dentro del proyecto de Symfony, se pide [DeployerPHP](https://deployer.org/docs) para desplegar nuestra 
 aplicación en los servidores.
-Para configurar deployer es necesario que creemos servers.yaml, en la raíz
+Para configurar deployer es necesario que se cree `servers.yaml`, en la raíz
 del proyecto.
 
 ```yaml
@@ -85,22 +85,22 @@ development:
  
  Para acceder a phpMyAdmin del proyecto se ha de ir a esta url: [`http://base-project.test/phpmyadmin/`](http://base-project.test/phpmyadmin/)
  
- ##### Si no funcionan los permisos correctamente
- Si no te funcionan los permisos para generar los archivos de `var/cache` o `var/logs`, [symfony lo tiene documentado en su web](https://symfony.com/doc/3.3/setup/file_permissions.html)
+ ##### Posible errores
+ Si tienes errores para generar los archivos de `var/cache` o `var/logs`, [symfony lo tiene documentado en su web](https://symfony.com/doc/3.3/setup/file_permissions.html)
  
  #### Personalizar el proyecto
- ##### Personalizar la maquina virtual
+ ##### Personalizar la máquina virtual
  Para personalizar el nombre de la máquina virtual para que no existan 2 con el mismo nombre en tu host, hay que modificar el `VagrantFile`.
  - Cambiar en la línia 13 el valor de `--name`, substituir `base-project-vm` por el nombre de la máquina que deseemos.
  - Cambiar en la línia 22 `base-project-vm` por el nombre que hayamos escrito antes en la línia 13.
- - Cambiar en la línia 27 el valor de `node.vm.hostname` por el dominio que querramos utilizar. 
+ - Cambiar en la línia 27 el valor de `node.vm.hostname` por el dominio que queramos utilizar. 
  
  ##### Variables de entorno
  Para personalizar las variables del entorno como el nombre de la base de datos o el dominio para ver el proyecto, se han de modificar las variables que usa Ansible para crear el entorno web en el servidor.
  El fichero de variables es `/ansible/vars/all.yml`
  
  ###### modificar el dominio
- Para modificar el dominio tenemos de cambiar las variables de apache que es quien nos genera el vhost. Se ha de cambiar la variable `apache.servername` donde le daremos el valor que haya en la configuracion del Vagrant en `VagrantFile` línia 27.
+ Para modificar el dominio hay que cambiar las variables de apache que es quien nos genera el vhost. Se ha de cambiar la variable `apache.servername` donde le daremos el valor que haya en la configuración de Vagrant en `VagrantFile` línia 27.
  
  ###### modificar la base de datos
  Hay que modificar las variables: 
@@ -109,6 +109,6 @@ development:
  - `mysql.password`: para modificar la contraseña
  
  ##### Personalizar Deployer
- Para desplegar la aplicación desde deployerPHP es necesario que se rellene la configuración en `/servers.yml`. Y se ha de crear el fichero `/usergit.php` con las variables `$user` y `$password`. Este fichero usergit.php esta vigilado por el `.gitignore` asi que nunca se subirá a tu repositorio. 
+ Para desplegar la aplicación desde deployerPHP es necesario que se rellene la configuración en `/servers.yml`. Y se ha de crear el fichero `/usergit.php` con las variables `$user` y `$password`. Este fichero `usergit.php` esta vigilado por el `.gitignore` asi que nunca se subirá a tu repositorio. 
  
   
