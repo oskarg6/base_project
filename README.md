@@ -86,7 +86,7 @@ development:
  Para acceder a phpMyAdmin del proyecto se ha de ir a esta url: [`http://base-project.test/phpmyadmin/`](http://base-project.test/phpmyadmin/)
  
  ##### Si no funcionan los permisos correctamente
- Si no te funcionan los permisos para generar los archivos de var/cache o var/logs, [symfony lo tiene documentado en su web](https://symfony.com/doc/3.3/setup/file_permissions.html)
+ Si no te funcionan los permisos para generar los archivos de `var/cache` o `var/logs`, [symfony lo tiene documentado en su web](https://symfony.com/doc/3.3/setup/file_permissions.html)
  
  #### Personalizar el proyecto
  ##### Personalizar la maquina virtual
