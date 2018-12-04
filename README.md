@@ -87,4 +87,29 @@ development:
  
  ##### Si no funcionan los permisos correctamente
  Si no te funcionan los permisos para generar los archivos de var/cache o var/logs, [symfony lo tiene documentado en su web](https://symfony.com/doc/3.3/setup/file_permissions.html)
+ 
+ #### Personalizar el proyecto
+ ##### Personalizar la maquina virtual
+ Para personalizar el nombre de la máquina virtual para que no existan 2 con el mismo nombre en tu host, hay que modificar el **VagrantFile**.
+ - Cambiar en la línia 13 el valor de --name, substituir **base-project-vm** por el nombre de la máquina que deseemos.
+ - Cambiar en la línia 22 **base-project-vm** por el nombre que hayamos escrito antes en la línia 13.
+ - Cambiar en la línia 27 el valor de **node.vm.hostname** por el dominio que querramos utilizar. 
+ 
+ ##### Variables de entorno
+ Para personalizar las variables del entorno como el nombre de la base de datos o el dominio para ver el proyecto, se han de modificar las variables que usa Ansible para crear el entorno web en el servidor.
+ El fichero de variables es **/ansible/vars/all.yml**
+ 
+ ###### modificar el dominio
+ Para modificar el dominio tenemos de cambiar las variables de apache que es quien nos genera el vhost. Se ha de cambiar la variable **apache.servername** donde le daremos el valor que haya en la configuracion del Vagrant en VagrantFile línia 27.
+ 
+ ###### modificar la base de datos
+ Hay que modificar las variables: 
+ - mysql.database: para cambiar el nombre de la base de datos
+ - mysql.user: para modificar el usuario de la base de datos
+ - mysql.password: para modificar la contraseña
+ 
+ ##### Personalizar Deployer
+ Para desplegar la aplicación desde deployerPHP es necesario que se rellene la configuración en /servers.yml. Y se ha de crear el fichero /usergit.php con las variables $user y $password. Este fichero usergit.php esta vigilado por el .gitignore
+asi que nunca se subirá a tu repositorio. 
+ 
   
