@@ -109,7 +109,7 @@ development:
  - mysql.password: para modificar la contraseña
  
  ##### Personalizar Deployer
- Para desplegar la aplicación desde deployerPHP es necesario que se rellene la configuración en /servers.yml. Y se ha de crear el fichero /usergit.php con las variables $user y $password. Este fichero usergit.php esta vigilado por el .gitignore
+ Para desplegar la aplicación desde deployerPHP es necesario que se rellene la configuración en `/servers.yml`. Y se ha de crear el fichero `/usergit.php` con las variables $user y $password. Este fichero usergit.php esta vigilado por el .gitignore
 asi que nunca se subirá a tu repositorio. 
  
   
