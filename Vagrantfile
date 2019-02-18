@@ -26,7 +26,7 @@ Vagrant.configure('2') do |config|
         node.vm.network :forwarded_port, host: 5001, guest: 5001, auto_correct: true
         node.vm.hostname = 'base-project.test'
 
-        node.vm.synced_folder './', '/vagrant', type: 'virtualbox'
+        node.vm.synced_folder './', '/vagrant', type: 'virtualbox', mount_options: ["dmode=777","fmode=666"]
         # si hay problemas con los permisos en las carpetas de cache
         #node.vm.synced_folder "./var", "/vagrant/var", :owner => 'vagrant', :group => 'www-data', :mount_options => ["dmode=775","fmode=666"]
 
