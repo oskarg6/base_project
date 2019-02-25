@@ -34,20 +34,4 @@
 - name: Set default system language pack
   command: 'locale-gen {{ server.locale }}'
 
-#- name: less Open ssh keys
-#  become: true
-#  shell: chmod 600 /home/ubuntu/.ssh/id_rsa
-#
-#- name: Create config bitbucket ssh
-#  become: false
-#  template:
-#    src: '{{ item }}'
-#    dest: '/home/ubuntu/.ssh/{{ item }}'
-#  with_items:
-#    - config
-#
-#- name: activar ssh agent
-#  become: false
-#  shell: eval $(ssh-agent) && ssh-add /home/ubuntu/.ssh/id_rsa
-
 - include: swap.yml
