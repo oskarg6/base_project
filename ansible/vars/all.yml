@@ -1,5 +1,5 @@
 ---
-ansible_user: ubuntu
+ansible_user: vagrant
 server:
   packages: [zip, sqlite3]
   timezone: Europe/Madrid
