@@ -27,7 +27,6 @@
         "gedmo/doctrine-extensions": "^2.4",
         "incenteev/composer-parameter-handler": "^2.0",
         "knplabs/doctrine-behaviors": "1.4.0",
-        "peraladaweb/koobinphp": "dev-master",
         "pixassociates/sortable-behavior-bundle": "^1.5",
         "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^5.0.0",
@@ -52,13 +51,6 @@
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://oscargarciarodriguez@bitbucket.org/peraladaweb/koobinphppublic.git",
-            "trunk-path": "master"
-        }
-    ],
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
