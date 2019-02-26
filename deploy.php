@@ -9,7 +9,7 @@ set('ssh_type', 'native');
 set('ssh_multiplexing', true);
 set('keep_releases', 5);
 
-set('repository', 'https://' . $user . ':' . $pass . '@bitbucket.org/peraladaweb/finca_mas_solers_web.git');
+set('repository', 'git@github.com:oskarg6/base_project.git');
 
 add('shared_files', ['web/.htaccess']);
 add('shared_dirs', ['web/uploads']);
